@@ -20,9 +20,9 @@ from skimage.metrics import (
 )
 from tensorflow.keras.utils import Progbar
 
-from src.data.mayo_challenge import MayoChallenge_DataGenerator
+from src.data.mayo_challenge import MayoChallengeDataGenerator
 from src.losses.perceptual_loss import VGGPerceptualLoss
-from src.models.unet import UNET
+from src.models.unet import Unet
 from src.utils.directory_tools import create_folder
 from src.utils.system_monitor import SystemMonitor
 
@@ -145,7 +145,7 @@ class Experiment:
 
             negative_normalize = self.train_setup["negative_values"].lower() == "yes"
             if self.management["mode"].lower() == "train":
-                self.train_gen = MayoChallenge_DataGenerator(
+                self.train_gen = MayoChallengeDataGenerator(
                     data_src=self.management["data-dir"],
                     scans=data["train"],
                     batch_size=int(self.train_setup["batch"]),
@@ -155,7 +155,7 @@ class Experiment:
                     negative_normalize=negative_normalize,
                     seed=self.seed,
                 )
-                self.val_gen = MayoChallenge_DataGenerator(
+                self.val_gen = MayoChallengeDataGenerator(
                     data_src=self.management["data-dir"],
                     scans=data["validation"],
                     batch_size=int(self.train_setup["batch"]),
@@ -166,7 +166,7 @@ class Experiment:
                     seed=self.seed,
                 )
             else:
-                self.val_gen = MayoChallenge_DataGenerator(
+                self.val_gen = MayoChallengeDataGenerator(
                     data_src=self.management["data-dir"],
                     scans=data["validation"],
                     batch_size=int(self.train_setup["batch"]),
@@ -176,7 +176,7 @@ class Experiment:
                     negative_normalize=negative_normalize,
                     seed=self.seed,
                 )
-                self.test_gen = MayoChallenge_DataGenerator(
+                self.test_gen = MayoChallengeDataGenerator(
                     data_src=self.management["data-dir"],
                     scans=data["test"],
                     batch_size=int(self.train_setup["batch"]),
@@ -195,7 +195,7 @@ class Experiment:
         """
         negative_output = self.train_setup["negative_values"].lower() == "yes"
         if self.train_setup["network"].lower() == "unet":
-            self.model = UNET(
+            self.model = Unet(
                 output_actv="tanh" if negative_output else "sigmoid",
                 channel=int(self.network_setup["channels"]),
                 seed=self.seed,

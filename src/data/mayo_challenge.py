@@ -4,7 +4,7 @@ import os
 import random
 
 
-class MayoChallenge_DataGenerator(tf.keras.utils.Sequence):
+class MayoChallengeDataGenerator(tf.keras.utils.Sequence):
     """
     Mayo Challenge sample values is already between 0 and 1. But majority hasn't
     0 ou 1 values.

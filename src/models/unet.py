@@ -71,11 +71,11 @@ class DoubleConv(tf.keras.models.Model):
 
 
 # arXiv:1505.04597
-class UNET(tf.keras.models.Model):
+class Unet(tf.keras.models.Model):
     def __init__(
         self, output_actv="sigmoid", channel=64, seed=None, use_batchnorm=False
     ):
-        super(UNET, self).__init__()
+        super(Unet, self).__init__()
 
         # ini = tf.keras.initializers.RandomNormal(mean=0.0, stddev=0.01, seed=seed)
         # ini_bias = ini
@@ -278,7 +278,7 @@ if __name__ == "__main__":
     import numpy as np
     import tensorflow.keras.backend as K
 
-    model = UNET(seed=10)
+    model = Unet(seed=10)
     pred = model(np.random.rand(1, 512, 512, 1), training=True)
     print(pred.shape)
     model.summary()
