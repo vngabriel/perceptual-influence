@@ -2,7 +2,7 @@
 URL of this script:
 https://github.com/SSinyu/RED-CNN/blob/master/prep.py
 
-Credits: 
+Credits:
 https://github.com/SSinyu
 
 See more:

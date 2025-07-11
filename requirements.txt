@@ -10,3 +10,4 @@ plotly
 imageio
 psutil
 matplotlib
+seaborn
