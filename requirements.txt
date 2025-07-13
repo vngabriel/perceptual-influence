@@ -1,0 +1,13 @@
+numpy==1.23.5
+tensorflow==2.10.0
+tensorflow-addons==0.23.0
+scikit-image==0.22.0
+pandas==2.2.1
+opencv-python==4.9.0.80
+configparser
+pydicom
+plotly
+imageio
+psutil
+matplotlib
+seaborn
