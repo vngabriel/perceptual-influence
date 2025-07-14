@@ -689,7 +689,7 @@ class Experiment:
             name_csv_file = f"./outputs/image_metrics_{self.test_setup['compute-metrics-all-set'].lower()}_{self.hash}.csv"
             csv_file = open(name_csv_file, "w")
             csv_file.write(
-                "image,SSIM input,SSIM output,PSNR input,PSNR output,NRMSE input,NRMSE output,HFS input,HFS output\n"
+                "image,SSIM input,SSIM output,PSNR input,PSNR output,NRMSE input,NRMSE output\n"
             )
             for i, scan in enumerate(data_gen.scans):
                 print(
@@ -721,7 +721,7 @@ class Experiment:
                         line += f"{peak_signal_noise_ratio(y, x):.2f},"
                         line += f"{peak_signal_noise_ratio(y, pred):.2f},"
                         line += f"{normalized_root_mse(y, x):.4f},"
-                        line += f"{normalized_root_mse(y, pred):.4f},"
+                        line += f"{normalized_root_mse(y, pred):.4f}\n"
                         csv_file.write(line)
 
                         if j != 0 and j % 5 == 0:
@@ -771,7 +771,7 @@ class Experiment:
 if __name__ == "__main__":
     start_time = time.time()
 
-    experiment = Experiment("train_experiment.ini")
+    experiment = Experiment("test_experiment.ini")
     experiment.load_data()
     experiment.load_model()
     experiment.execute()
