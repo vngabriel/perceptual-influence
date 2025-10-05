@@ -139,6 +139,7 @@ def main():
         "3001474124": "2",
         "255671025": "3",
         "22099157": "4",
+        "102211899": "5",  # baseline
     }
 
     csv_files = [
@@ -146,6 +147,7 @@ def main():
         "/home/gabriel/Research/perceptual-influence-models-metrics/image_metrics_test_3001474124.csv",
         "/home/gabriel/Research/perceptual-influence-models-metrics/image_metrics_test_255671025.csv",
         "/home/gabriel/Research/perceptual-influence-models-metrics/image_metrics_test_22099157.csv",
+        "/home/gabriel/Research/perceptual-influence-models-metrics/image_metrics_test_102211899.csv",
     ]
     data = load_data(csv_files)
 

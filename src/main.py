@@ -407,7 +407,7 @@ class Experiment:
                 if i >= 0:
                     if self.train_setup["loss"].lower() == "perceptual":
                         pb_val.update(
-                            i * self.train_gen.batch_size,
+                            i * self.val_gen.batch_size,
                             values=[
                                 ("val-loss", total_val_loss / (i + 1)),  # mean of loss
                                 ("val-image-loss", total_val_image_loss / (i + 1)),
