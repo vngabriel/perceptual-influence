@@ -2,8 +2,6 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2509.23025-b31b1b.svg)](https://arxiv.org/abs/2509.23025)
 
-This repository contains the implementation and experimental code for the paper **"Perceptual Influence: Improving the Perceptual Loss Design for Low-Dose CT Enhancement"** by Gabriel A. Viana, Luis F. Alves Pereira, Tsang Ing Ren, George D. C. Cavalcanti, and Jan Sijbers.
-
 ## Key Contributions
 
 This work introduces the **perceptual influence metric**, a novel approach to quantify the relative contribution of perceptual loss components in neural network training. By providing objective guidelines for perceptual loss design, this metric enables researchers and practitioners to optimize loss configurations systematically, leading to significant improvements in noise reduction and structural fidelity for Low-Dose CT image enhancement. The effectiveness of this approach is validated through comprehensive statistical analysis, demonstrating that better-designed perceptual losses outperform commonly used configurations without requiring architectural changes.
@@ -170,23 +168,3 @@ The paper demonstrates that:
 - Structural fidelity is enhanced without architectural changes
 - Perceptual influence analysis provides objective guidelines for loss design
 
-## Citation
-
-If you use this code or find it helpful, please cite our paper:
-
-```bibtex
-@misc{viana2025perceptualinfluenceimprovingperceptual,
-      title={Perceptual Influence: Improving the Perceptual Loss Design for Low-Dose CT Enhancement}, 
-      author={Gabriel A. Viana and Luis F. Alves Pereira and Tsang Ing Ren and George D. C. Cavalcanti and Jan Sijbers},
-      year={2025},
-      eprint={2509.23025},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2509.23025}, 
-}
-```
-
-## Contact
-
-For questions or issues, please contact:
-- Gabriel A. Viana: gav3@cin.ufpe.br
