@@ -18,7 +18,7 @@ This work introduces the **perceptual influence metric**, a novel approach to qu
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/vngabriel/perceptual-influence.git
+git clone <url>
 cd perceptual-influence
 ```
 
